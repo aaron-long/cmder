@@ -296,9 +296,9 @@ local function git_prompt_filter()
         local color
         if branch then
             -- Has branch => therefore it is a git folder, now figure out status
-            local gitStatus = get_git_status()
-            local gitConflict = get_git_conflict()
-
+            --local gitStatus = get_git_status()
+            --local gitConflict = get_git_conflict()
+-- REMOVED gitStatus to check if hangs stop inside EPICS dir
             color = colors.dirty
             if gitStatus then
                 color = colors.clean
